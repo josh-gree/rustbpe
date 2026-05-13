@@ -916,12 +916,6 @@ mod tests {
             pattern: String::new(),
             compiled_pattern: Regex::new("").unwrap(),
         };
-
-        // "ab" appears 100 times, "bc" appears 50 times
-        // After merging "ab", the corpus becomes "X c" where X=256
-        // Then "Xc" (256, 99) should be merged next? No wait...
-        // Let's use a simpler example:
-        // "ab" appears 10 times
         let words = vec![
             Word::new(vec![97, 98]), // "ab"
         ];
